@@ -1,0 +1,44 @@
+[
+    {
+        "CategoryName": "TextBook",
+        "name": "Math",
+        "img": "https://m.media-amazon.com/images/I/81+Eh-enKAL._AC_UF1000,1000_QL80_.jpg",
+        "description": "The CBSE Class 10 Maths textbook is a book that covers topics like real numbers, polynomials, quadratic equations, and probability. It is published by NCERT"
+    },
+    {
+        "CategoryName": "TextBook",
+        "name": "Hindi",
+        "img": "https://ncert.nic.in/textbook/pdf/jhsp1cc.jpg",
+        "description": "NCERT Books for Class 10 Hindi help students learn all the chapters effectively as the contents of these books are presented in a very simple language. There are four books for Hindi subject in Class 10. These are- Kshitij, Kritika, Sparsh and Sanchayan"
+    },
+    {
+        "CategoryName": "TextBook",
+        "name": "English",
+        "img": "https://ncert.nic.in/textbook/pdf/jeff1cc.jpg",
+        "description": "First Flight is the NCERT English textbook for Class 10, featuring a diverse collection of stories and poems. It aims to develop students' reading, comprehension, and literary skills while introducing them to various writing styles and themes."
+    },
+    {
+        "CategoryName": "TextBook",
+        "name": "Science",
+        "img": "https://ncert.nic.in/textbook/pdf/jeff1cc.jpg",
+        "description": "NCERT Class 10 Science Book provides students with in-depth information about all the topics and concepts that are covered in Class 10 Science, as per the CBSE syllabus."
+    },
+    {
+        "CategoryName": "TextBook",
+        "name": "History",
+        "img": "https://meritbox.app/project/public/book/book_CSSH10EBK_1696506012.jpg",
+        "description": "The NCERT history textbook for Class 10 is titled India and the Contemporary World II. It delves into significant historical events and processes, focusing on the modern period.Students will explore topics like the rise of nationalism in Europe, the nationalist movement in India, the making of a global world, the age of industrialization, and the impact of print culture"
+    },
+    {
+        "CategoryName": "TextBook",
+        "name": "Geography",
+        "img": "https://m.media-amazon.com/images/I/91PX5vg6yVL.jpg",
+        "description": "The NCERT geography textbook for Class 10 is titled Contemporary India II. It explores India's diverse geographical features, including its resources, landforms, climate, vegetation, and population."
+    },
+    {
+        "CategoryName": "TextBook",
+        "name": "Economics",
+        "img": "https://ncert.nic.in/textbook/pdf/jess2cc.jpg",
+        "description": "The NCERT economics textbook for Class 10 is titled Understanding Economic Development. It introduces fundamental economic concepts and explores various aspects of economic development, particularly within the Indian context."
+    }
+]

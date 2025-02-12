@@ -12,12 +12,11 @@ const mongoDB = async () => {
       const fetch_data = mongoose.connection.db.collection("books"); // Get the collection AFTER connecting
   
       const data = await fetch_data.find({}).toArray(); // Use await inside the async function
-      console.log(data);
+      console.log();
   
     } catch (err) {
       console.error("---", err); // Use console.error for errors
     }
   };
-
 
 module.exports = mongoDB;

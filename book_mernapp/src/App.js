@@ -10,6 +10,7 @@ import Login from './screen/Login';
 
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
+import Signup from './screen/Signup.js';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
 
         <Route exact path='/' element={<Home/>}/>
         <Route exact path='/login' element= {<Login/>}/>
-
+        <Route exact path='/createuser' element= {<Signup/>}/>
+        
        </Routes>
 
       </div>

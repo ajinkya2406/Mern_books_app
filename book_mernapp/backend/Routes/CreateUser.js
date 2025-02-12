@@ -3,30 +3,58 @@ const router = express.Router()
 const user = require('../models/User')
 const { body, validationResult } = require('express-validator');
 
-router.post("/createuser",[
+router.post("/createuser", [
     body('email').isEmail(),
     body('name').isLength({ min: 5 }),
-    body('password','Incorrect Password').isLength({ min: 5 }).isAlphanumeric()]
-    ,async(req,res)=>{
+    body('password', 'Incorrect Password').isLength({ min: 5 }).isAlphanumeric()]
+    , async (req, res) => {
 
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
-            return res.status(400).json({errors: errors.array()});
+            return res.status(400).json({ errors: errors.array() });
         }
 
 
-    try {
-        await user.create({
-            name:req.body.name,
-            password:req.body.password,
-            email:req.body.email,
-            location:req.body.location
-        })
-    res.json({success:true});
-    } catch (error) {
-        console.log(error)
-        res.json({success:false});
-    };
-});
+        try {
+            await user.create({
+                name: req.body.name,
+                password: req.body.password,
+                email: req.body.email,
+                location: req.body.location
+            })
+            res.json({ success: true });
+        } catch (error) {
+            console.log(error)
+            res.json({ success: false });
+        };
+    });
 
+
+
+
+router.post("/loginuser", [
+    body('email').isEmail(),
+    body('password', 'Incorrect Password').isLength({ min: 5 }).isAlphanumeric()]
+    , async (req, res) => {
+        let email = req.body.email;
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
+        try {
+            let userData = await user.findOne({ email })
+            if (!userData) {
+                return res.status(400).json({ errors: "try logging in with correct email" });
+            }
+
+            if (req.body.password !== userData.password) {
+                return res.status(400).json({ errors: "try logging in with correct password" });
+            }
+
+            return res.json({ success: true });
+        } catch (error) {
+            console.log(error)
+            res.json({ success: false });
+        };
+    });
 module.exports = router;

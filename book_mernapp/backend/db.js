@@ -2,21 +2,20 @@ const mongoose = require('mongoose')
 const mongoURI = 'mongodb+srv://bookify:bookify06@cluster1.voser.mongodb.net/bookify_mern?retryWrites=true&w=majority&appName=Cluster1'
 
 const mongoDB = async () => {
-    try {
+  try {
       await mongoose.connect(mongoURI, { 
-        useNewUrlParser: true, 
-        useUnifiedTopology: true // Important for newer MongoDB drivers
+          useNewUrlParser: true, // These options are still sometimes needed
+          useUnifiedTopology: true // Add this for the new Server discovery and monitoring engine
       });
-      console.log("connected");
-  
-      const fetch_data = mongoose.connection.db.collection("books"); // Get the collection AFTER connecting
-  
-      const data = await fetch_data.find({}).toArray(); // Use await inside the async function
-      console.log();
-  
-    } catch (err) {
-      console.error("---", err); // Use console.error for errors
-    }
-  };
+      console.log("Connected");
+
+      const fetched_data = await mongoose.connection.db.collection("books"); // Use await here
+      const data = await fetched_data.find({}).toArray(); // Use await here too
+      global.books = data;
+      
+  } catch (err) {
+      console.error("Error connecting to MongoDB:", err);
+  }
+};
 
 module.exports = mongoDB;

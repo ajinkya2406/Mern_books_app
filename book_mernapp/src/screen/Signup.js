@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Navbar from '../components/Navbar'
 
 export default function Signup() {
 
@@ -27,6 +28,7 @@ export default function Signup() {
     }
     return (
         <>
+        <div><Navbar /></div>
             <div className='container'>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">

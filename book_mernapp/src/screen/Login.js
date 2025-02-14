@@ -1,6 +1,7 @@
 import { useState } from "react"
 import React from 'react'
 import { Link,useNavigate } from "react-router-dom";
+import Navbar from '../components/Navbar'
 
 export default function Login() {
 
@@ -22,7 +23,9 @@ export default function Login() {
       alert("Invalid Credentials");
     }
     if (data.success) {
-      navigate("/")
+      localStorage.setItem("authToken",data.authToken);
+      console.log(localStorage.getItem("authToken"))
+      navigate("/");
     }
   }
 
@@ -32,6 +35,7 @@ export default function Login() {
 
   return (
     <>
+    <div><Navbar /></div>
       <div className='container'>
         <form onSubmit={handleSubmit}>
 

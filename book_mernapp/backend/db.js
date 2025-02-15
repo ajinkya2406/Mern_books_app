@@ -11,7 +11,10 @@ const mongoDB = async () => {
 
       const fetched_data = await mongoose.connection.db.collection("books"); // Use await here
       const data = await fetched_data.find({}).toArray(); // Use await here too
+      const books_categorie = await mongoose.connection.db.collection("books_categories");
+      const Catdata = await books_categorie.find({}).toArray();
       global.books = data;
+      global.books_categories = Catdata;
       
   } catch (err) {
       console.error("Error connecting to MongoDB:", err);

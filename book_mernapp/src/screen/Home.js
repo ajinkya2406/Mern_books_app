@@ -54,13 +54,13 @@ export default function Home() {
 
                         </div>
                         <div className="carousel-item active">
-                            <img src="https://www.pngkey.com/png/full/275-2752941_original-size-is-900-700-pixels-discounts.png" className="d-block w-100 " style={{ filter: "brightness(30%" }} alt="..." />
+                            <img src="https://grbathla.com/wp-content/uploads/2021/02/9th-10th-Blog.jpg" className="d-block w-100 " style={{ filter: "brightness(30%" }} alt="..." />
                         </div>
                         <div className="carousel-item">
-                            <img src={img2} className="d-block w-100" style={{ filter: "brightness(30%" }} alt="..." />
+                            <img src="https://rukminim2.flixcart.com/image/850/1000/kxkqavk0/regionalbooks/f/k/q/class-10th-ncert-textbook-maths-science-social-science-kartika-original-imag9zvfe8tzmzex.jpeg?q=20&crop=false" className="d-block w-100" style={{ filter: "brightness(30%" }} alt="..." />
                         </div>
                         <div className="carousel-item">
-                            <img src={img1_2_1} className="d-block w-100" style={{ filter: "brightness(30%" }} alt="..." />
+                            <img src="https://www.tppl.org.in/2020/9476-large_default/sppu-bca-2-semester-5-in-1-combo-pack.jpg" className="d-block w-100" style={{ filter: "brightness(30%" }} alt="..." />
                         </div>
                     </div>
                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">

@@ -1,6 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import img1_1_1 from '../images/img1.jpg';
 import img1_2_1 from '../images/img1.jpg';
 import img2 from '../images/img2.jpg';
 
@@ -19,8 +20,8 @@ export default function Carousal() {
                             </div>
                         
                     </div>
-                    <div className="carousel-item active">
-                        <img src="https://www.pngkey.com/png/full/275-2752941_original-size-is-900-700-pixels-discounts.png" className="d-block w-100 " style={{filter: "brightness(30%"}} alt="..." />
+                    <div className="carousel-item active" >
+                        <img src={img1_1_1} className="d-block w-100 " style={{filter: "brightness 30%"}} alt="..." />
                     </div>
                     <div className="carousel-item">
                         <img src={img2} className="d-block w-100" style={{filter: "brightness(30%"}} alt="..." />

@@ -11,7 +11,7 @@ export default function Card(props) {
             <div>
                 <div>
                     <div className="card mt-3 " style={{ "width": "18rem", "maxHeight": "600px" }}>
-                        <img src="https://m.media-amazon.com/images/I/81+Eh-enKAL._AC_UF1000,1000_QL80_.jpg" className="card-img-top justify-content-centre d-flex align-items-center" alt="..." />
+                        <img src={props.imgSrc} className="card-img-top justify-content-centre d-flex align-items-center" alt="..." style={{height:"360px", objectFit:"fill"}}/>
                         <div className="card-body">
                             <h5 className="card-title">{props.bookName}</h5>
                             

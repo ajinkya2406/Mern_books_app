@@ -38,7 +38,7 @@ export default function Home() {
                 {
                     bookCat.length > 0
                         ? bookCat.map((data) => {
-                            return (<div>
+                            return (<div className='row mb-3'>
                                 <div key={data._id} className='fs-3 m-3'>
                                     {data.CategoryName}
                                 </div>
@@ -46,8 +46,11 @@ export default function Home() {
                                 {bookitem.length>0 ? bookitem.filter((item)=>item.CategoryName === data.CategoryName)
                                 .map(filteritems =>{
                                     return(
-                                        <div key={filteritems._id}>
-                                            <Card book={filteritems} />
+                                        <div key={filteritems._id} className='col-12 col-md-6 col-lg-3'>
+                                            <Card bookName={filteritems.name}
+                                            options = {filteritems.options[0]}
+                                            imgSrc = {filteritems.img}
+                                            />
                                         </div>
                                     )
                                 }):<div>no such data found</div>}
@@ -56,7 +59,8 @@ export default function Home() {
                         }) : ""
                 }
 
-                <Card />
+                
+                
             </div>
             <div><Footer /></div>
         </div>

@@ -11,24 +11,27 @@ import Login from './screen/Login';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
 import Signup from './screen/Signup.js';
+import { CartProvider } from './components/ContextReducer.js';
 
 function App() {
   return (
-    <Router>
+    <CartProvider>
+      <Router>
 
-      <div>
+        <div>
 
-       <Routes>
+          <Routes>
 
-        <Route exact path='/' element={<Home/>}/>
-        <Route exact path='/login' element= {<Login/>}/>
-        <Route exact path='/createuser' element= {<Signup/>}/>
-        
-       </Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route exact path='/login' element={<Login />} />
+            <Route exact path='/createuser' element={<Signup />} />
 
-      </div>
+          </Routes>
 
-    </Router>
+        </div>
+
+      </Router>
+    </CartProvider>
   );
 }
 

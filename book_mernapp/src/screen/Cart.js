@@ -1,6 +1,6 @@
 import React from 'react'
 import { useCart, useDispatchCart } from '../components/ContextReducer'
-import img2 from '../images/img2.jpg';
+
 
 export default function Cart() {
 
@@ -37,7 +37,7 @@ export default function Cart() {
                                 <td>{book.quantity}</td>
                                 <td>{book.size}</td>
                                 <td>{book.price}</td>
-                                <td><button type='button' className='btn p-0'><img src={img2} alt='delete' onClick={() => { dispatch({ type: "REMOVE", index: index }) }} /></button></td>
+                                <td><button type='button' className='btn p-0'></button></td>
                             </tr>
                         ))
 

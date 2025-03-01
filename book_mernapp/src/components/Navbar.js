@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Badge from 'react-bootstrap/Badge'
+import Model1 from '../Model1';
+import Cart from '../screen/Cart';
 
 export default function Navbar() {
+
+const[cartView, setCartView] = useState(false)  
 const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("authToken");
@@ -35,10 +39,11 @@ const navigate = useNavigate();
               </div>
               :
               <div>
-                <div className='btn bg-white text-success mx-2'>
+                <div className='btn bg-white text-success mx-2'onClick={()=>{setCartView(true)}}>
                   My Cart {" "}
                   <Badge pill bg="danger" className="ms-1">2</Badge>
                 </div>
+                {cartView?<Model1 onClose={()=>setCartView(false)}><Cart/></Model1>:null}
                 <div className='btn bg-white text-danger mx-2' onClick={handleLogout}>
                   Logout
                 </div>

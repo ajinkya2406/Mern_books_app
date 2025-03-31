@@ -14,6 +14,15 @@ app.use((req,res,next)=>{
 app.get('/', (rq,res)=>{
     res.send('Hello World!')
 });
+
+app.use(cors(
+    {
+        origin: ["mern-books-app-frontend.vercel.app"],
+        methods: ["GET", "POST"],
+        credentials: true
+    }
+));
+
 app.use(express.json())
 app.use('/api',require("./Routes/CreateUser"));
 app.use('/api',require("./Routes/DisplayData"));

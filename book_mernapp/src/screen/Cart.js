@@ -1,6 +1,6 @@
 import React from 'react'
 import { useCart, useDispatchCart } from '../components/ContextReducer'
-
+import delete1 from '../images/delete1.svg'
 
 export default function Cart() {
 
@@ -8,11 +8,11 @@ export default function Cart() {
     let dispatch = useDispatchCart();
     if (data.length === 0) {
         return (
-            <div>
-                <div className='m-5 w-100 text-centre fs-3'>The Cart is Empty!</div>
-            </div>
+          <div>
+            <div className='m-5 w-100 text-center fs-3'>The Cart is Empty!</div>
+          </div>
         )
-    }
+      }
 
     let totalPrice = data.reduce((total, book) => total + book.price, 0)
     return (
@@ -37,7 +37,7 @@ export default function Cart() {
                                 <td>{book.quantity}</td>
                                 <td>{book.size}</td>
                                 <td>{book.price}</td>
-                                <td><button type='button' className='btn p-0'></button></td>
+                                <td><button type='button' className='btn p-0'><img src={delete1} alt='delete' onClick={() => { dispatch({ type: "REMOVE", index: index }) }} /></button></td>
                             </tr>
                         ))
 
